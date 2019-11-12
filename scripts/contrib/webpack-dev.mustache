@@ -1,0 +1,32 @@
+module.exports = {
+  entry:  __dirname + '/../../src/wrapper.js',
+  mode: 'development',
+  output: {
+    path: __dirname + '/../../builds',
+    publicPath: '../../example',
+    filename: '{{libraryName}}.js',
+    library: '{{libraryName}}'
+  },
+  module: {
+    rules: [
+      {
+        test: /\.css$/,
+        use: [
+          'style-loader',
+          'css-loader'
+        ]
+      },
+      {
+        test: /\.(js|jsx)$/,
+        use: [
+          {
+            loader: 'babel-loader',
+            options: {
+              presets: ['@babel/react']
+            }
+          }
+        ],
+      }
+    ]
+  },
+};

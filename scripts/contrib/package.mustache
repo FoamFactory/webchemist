@@ -1,0 +1,32 @@
+{
+  "name": "webchemist",
+  "version": "1.0.0",
+  "description": "A template for packaging react components for a non-react-based web application",
+  "main": "src/wrapper.js",
+  "repository": "https://github.com/github:foamfactory/webchemist",
+  "author": "Scott Johnson <jaywir3@gmail.com>",
+  "license": "MPL-2.0",
+  "private": true,
+  "scripts": {
+    "example": "node server.js",
+    "bundle-dev": "webpack --config ./config/webpack/webpack.dev.config.js"
+  },
+  "dependencies": {
+    "{{packageName}}": "{{{packageLocation}}}"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.7.0",
+    "@babel/core": "^7.7.2",
+    "@babel/preset-env": "^7.7.1",
+    "@babel/preset-react": "^7.7.0",
+    "babel-loader": "^8.0.6",
+    "css-loader": "^3.2.0",
+    "express": "^4.17.1",
+    "mustache": "^3.1.0",
+    "react": "^16.11.0",
+    "react-dom": "^16.11.0",
+    "style-loader": "^1.0.0",
+    "webpack": "^4.41.2",
+    "webpack-cli": "^3.3.10"
+  }
+}
