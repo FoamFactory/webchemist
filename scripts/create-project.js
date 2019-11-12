@@ -37,14 +37,18 @@ function askRemainingQuestions(rl, packageName, packageLocation) {
       };
 
       for (const file of inputMap) {
+          let inputFilename = __dirname + "/" + file.input;
+
           // read input file
-          let input = fs.readFileSync(__dirname + '/' + file.input, 'utf-8');
+          let input = fs.readFileSync(inputFilename, 'utf-8');
 
           // resolve mustache template
           let output = Mustache.render(input, view);
 
+          let outputFilename = __dirname + '/' + file.output;
+
           // output new file
-          fs.writeFileSync(__dirname + '/' + file.output, output);
+          fs.writeFileSync(outputFilename, output);
       }
 
       console.log("Your project is set up! Please run 'yarn install' to install necessary dependencies");

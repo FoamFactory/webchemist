@@ -3,3 +3,4 @@ src/**
 config/webpack/**
 example/**
 builds/**
+yarn-error.log

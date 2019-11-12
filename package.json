@@ -8,6 +8,7 @@
   "license": "MPL-2.0",
   "private": true,
   "scripts": {
+    "setup": "node scripts/create-project.js",
     "example": "node server.js",
     "bundle-dev": "webpack --config ./config/webpack/webpack.dev.config.js"
   },
